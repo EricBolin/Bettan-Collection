@@ -1,0 +1,822 @@
+1.py
+#!/usr/bin/env python3
+
+x=8
+y=5
+hej="hejsan"
+print (x+y)
+print (hej*53)
+
+###########################################################
+
+2.py
+#!/usr/bin/env python3
+
+hel = int(input("Skriv ett heltal: "))
+svaret = hel ** 2
+
+print("talet i kvadrat är:", svaret)
+
+###########################################################
+
+eric.py
+#!/usr/bin/env python3
+#work in progress
+#är ju fan om man inte ska kunna shuffle-randomajsa några ord i en lista....
+
+#from random import shuffle
+import random
+
+l=["Eric", "Bolin", "Lund"]
+m=list(l)
+random.shuffle(shuffled)
+shuffled=''.join(shuffled)
+print(shuffled)
+
+###########################################################
+
+gym.py
+#!/usr/bin/env python3
+#kompletterad med att visa total kostnad för biljetter gånger antal beskök, samt vad besparingen blir.
+k = int(input("Pris för årskort? "))
+b = int(input("Pris för biljett? "))
+n = int(input("Antal besök? "))
+t = (n * b)
+if n * b <= k:
+        print("Köp biljetter")
+        print("Total kostnad biljetter:", t,"kr")
+        print("Du sparar:", k - t,"kr")
+else:
+        print("Köp årskort")
+        print("Total kostnad biljetter:", t,"kr")
+        print("Du sparar:", t - k,"kr")
+
+###########################################################
+
+namn.py
+#!/usr/bin/env python3
+#namnscript som sätter stor bokstav först (på korta namn) även om det skrivs med liten bokstav.
+
+
+namn = input("Vad heter du? ")
+namn = namn.capitalize()
+nr = len(namn)
+
+if nr >= 8:
+
+        print ("Oj, det var ett lååååååångt namn")
+else:
+        print ("" + namn +  " är ett kort och bra namn")
+
+###########################################################
+
+quit.py
+#!/usr/bin/python3
+#work in progress
+
+x=""
+
+while x!="quit":
+        x=input("Skriv nagot, avsluta med 'quit': ")
+        if x.lower() == "quit":
+                break
+        print(x + " konverterat till stora bokstaver blir " + x.upper())
+print("Tack och hej!")
+
+###########################################################
+
+varannat.py
+#!/usr/bin/env python3
+
+for i in range(100, -2, -2):
+
+        print("", i, end="")
+
+
+###########################################################
+
+f.py
+
+#!/usr/bin/env python3
+
+#utan f-string
+#namn = input(str("Ditt username "))
+#print(namn.ljust(20), "*")
+
+#med f-string
+namn = (input("Ditt usernamne "))
+print(f"{namn:19}*")
+
+###########################################################
+
+gissatal.py
+
+#!/usr/bin/env python3
+
+#Gissa talet
+
+#Skapa ett slumpmässigt tal mellan 1 och 100, importera 'random'-funktionen
+import random
+nummer = random.randint(1, 100)
+frsk = 0 #räkna antal försök att hitta rätt nummer
+gissa = 0
+print("""\n
+╔═╗ ╔═╗ ╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗ ╔═╗ ╔═╗
+╚═╝ ╚═╝ ╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝ ╚═╝ ╚═╝
+ ██████╗ ██╗███████╗███████╗ █████╗     ████████╗ █████╗ ██╗     ███████╗████████╗██╗██╗
+██╔════╝ ██║██╔════╝██╔════╝██╔══██╗    ╚══██╔══╝██╔══██╗██║     ██╔════╝╚══██╔══╝██║██║
+██║  ███╗██║███████╗███████╗███████║       ██║   ███████║██║     █████╗     ██║   ██║██║
+██║   ██║██║╚════██║╚════██║██╔══██║       ██║   ██╔══██║██║     ██╔══╝     ██║   ╚═╝╚═╝
+╚██████╔╝██║███████║███████║██║  ██║       ██║   ██║  ██║███████╗███████╗   ██║   ██╗██╗
+ ╚═════╝ ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝       ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝   ╚═╝   ╚═╝╚═╝
+╔═╗ ╔═╗ ╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗ ╔═╗ ╔═╗
+╚═╝ ╚═╝ ╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝ ╚═╝ ╚═╝
+                                                 """)
+print('...mellan 1 och 100!')
+while gissa != nummer:
+    gissa = int(input('\nGissa: '))
+    frsk += 1
+    if gissa == nummer:
+        print('Rätt! Det krävdes', frsk, 'försök!')
+        break
+    elif gissa < nummer:
+        print('Gå högre!')
+    else:
+        print('Gå lägre!')
+
+print("""\n
+╔═╗ ╔═╗ ╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗ ╔═╗ ╔═╗
+╚═╝ ╚═╝ ╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝ ╚═╝ ╚═╝
+""")
+
+###########################################################
+
+multi.py
+
+#!/usr/bin/env python3
+#work in progress
+
+#input("Skriv in ett tal mellan 1 och 25: ")
+
+#x = range(1,26)
+#n = range(1,26)
+
+#multi = [[i*j for j in x] for i in n]
+#print(multi)
+
+
+#table = []
+#for y in range(1, 26):
+    # Create the inner lists with a temporary variable.
+    # You must do this every time before the inner loop is entered,
+    # otherwise
+ #   row = []
+
+#table = [[x*y for x in range(1, 26)] for y in range(1, 26)]
+#for i in range(1, 26):
+#    print(i, end='  ')
+#    continue
+#print("-" * 100)
+#print(table)
+
+
+print('|   |', end=' ')
+for col in range(1, 17):
+    print(' %2i' % col, end='  ')
+print()
+print('_' * 101)
+for row1 in range(1, 7):
+    print('|',"%2i"%row1, end=' | ')
+    for col1 in range(1, 17):
+        print("%2i" %(row1*col1), end='   ')
+    print()
+print()
+
+###########################################################
+
+primtal.py
+
+#!/usr/bin/env python3
+#skriv in ett heltal och kolla om det är ett primtal
+#Returnerar ett boolean-värde, True om det är ett primtal, False om det inte är det.
+#Plus en textsträng.
+
+#första delen av skriptet avkommenterat
+
+#num = int(input("Skriv ett nummer: "))
+#if num > 1:
+
+#   for i in range(2,num):
+#       if (num % i) == 0:
+#           print(False,": Inte ett primtal")
+#           break
+#  else:
+#       print(True,": Grattis, ett primtal!")
+#
+#
+#else:
+#   print(False)
+
+###
+##
+#
+
+#del 2 av skriptet:
+
+#skapa en lista som slumpar fram 5 heltal ur en lista med tal mellan 2 och 10000
+import random
+
+random_List = []
+for i in range(0, 5):
+    random_List.append(random.randint(2, 10000))
+print(random_List)
+#Plocka ut 5 slumpmässiga tal ur random_List och stoppa in dem i check_List
+check_List = []
+for num in random_List:
+    if num == 0 or num == 1:
+        continue
+    for i in range(2, num // 2 + 1):
+        if num % i == 0:
+            break
+    else:
+        check_List.append(num)
+if len(check_List) :
+    print("Primtal: ",end ="")
+    for ch in check_List:
+        print(ch, end = ", ")
+else:
+    print("Inget primtal i listan")
+
+###########################################################
+
+
+summeralista.py
+
+#!/usr/bin/env python3
+#Skriv en funktion som summerar alla talen i en lista.
+#Funktionen ska ta en lista som indata och lämna ifrån sig en float som resultat.
+#All data i listan som inte är int eller float ska ignoreras.
+#Anropa funktionen med några olika listor för att visa att det funkar.
+
+#Skapar några listor(notera att 'k' endast innehåller int, bool och str):
+k = [6,"noll", 1, 11, "elva", 111, 2, 22, 222, 4, True]
+l = [1, "Hej", 8.0, 12, "Arne", 5.0, 3, 11., 15, 10, 88.3]
+m = [8,"Kurt", 15560, 14, "Olsson", 55, 555.5, False, 5.555, 55.55, 5]
+n = ["ett", "två", "tre", 4, 5, 6, 7, 8, 9, 1.0]
+
+#har efter långt sökande hittat en lösning som är lite ful, men funkar:
+#koden plockar ut int och float ur vald lista och printar ut det som float.
+
+z = ([x for x in l if isinstance(x,int) and not isinstance(x,bool)])
+y = ([x for x in l if isinstance(x,float) and not isinstance(x,bool)])
+
+a = float(sum(z + y))
+print(z + y, "=", a)
+
+###########################################################
+
+logga.py
+
+#!/usr/bin/env python3
+import logging
+import datetime
+from datetime import datetime
+no = datetime.now()
+dtw = no.strftime("%Y-%m-%d %H:%M:%S")
+with open("logg.txt", "a") as logga:
+    logga.write(dtw + "\n")
+
+###########################################################
+
+personnummer.py
+
+#!/usr/bin/env python3
+
+#wip
+def kollapersonnummer(test):
+    c=0
+    if len(test) != 10:
+        print('Error')
+    else:
+        personnummer = list(test)
+        for i in range(0, len(personnummer)):
+            personnummer[i] = int(personnummer[i])
+
+        for x in range(0, 10, 2):
+            a = personnummer[x] * 2
+            if a > 10:
+                a = str(a)
+                a = list(a)
+                for b in range(0, len(a)):
+                    a[b] = int(a[b])
+                a = a[0] + a[1]
+
+            c += a
+
+        for d in range(1, 11, 2):
+            e = personnummer[d]
+            c += e
+
+        if (c % 10) == 0:
+            print('Personnumret är giltigt!')
+        else:
+            print('Personnumret är ogiltigt!')
+
+
+test = input('Vänligen ange personnummer (10 siffror): ')
+kollapersonnummer(test)
+
+###########################################################
+sums.py
+
+#!/usr/bin/env python3
+import sys
+
+add = 0.0
+# Getting the length of command
+# line arguments
+n = len(sys.argv)
+
+for i in range(1, n):
+    add += float(sys.argv[i])
+
+print ("the sum is :", add)
+
+###########################################################
+
+sysargv.py
+
+#!/usr/bin/env python3
+#WIP
+import sys
+
+print("""Nu skulle jag tagit innehållet i 'txt_1' och lagt till det i slutet av 'txt_2',
+men jag har inte lärt mig filhantering ännu så det får jag göra senare...""", sys.argv[0])
+print("Bla bla bla:", str(sys.argv[0]))
+
+import argparse
+
+parser = argparse.ArgumentParser(description="Tar innehåll i en fil och lägger till det i slutet av en annan fil, av Eric Bolin")
+
+args = parser.parse_args()
+print(len(sys.argv))
+
+###########################################################
+tid.py
+
+#!/usr/bin/env python3
+
+import datetime
+from datetime import datetime
+no = datetime.now()
+dtd = no.strftime("%A")
+dtw = no.strftime("%H:%M")
+#print("date and time:",date_time)
+print("The time is", dtw, "and today is", dtd)
+#weekDays = ("Monday", 0: "Tuesday", 1: "Wednesday", 2: "Thursday", 3: "Friday", 4: "Saturday", 5: "Sunday", 6:)
+
+###########################################################
+
+
+krypto.py
+
+#!/usr/bin/env python3
+
+#defined function
+key = "hdkaeinjwqbgsfpvuytcromlxz"
+abc = "abcdefghijklmnopqrstuvwxyz"
+text = input("Skriv ett meddelande som krypteras: ")
+
+def caesar():
+    intext=""
+    for letter in text:
+        if letter.lower() in abc:
+            intext += key[abc.find(letter.lower())]
+        else:
+            intext += letter
+    print(intext)
+caesar()
+
+
+#Första försöket:
+#key = "hdkaeinjwqbgsfpvuytcromlxz"
+#abc = "abcdefghijklmnopqrstuvwxyz"
+#text = input("Skriv din text: ")
+#print("".join([key[abc.find(a)] if a in abc else a for a in text.lower() ]))
+
+
+
+###########################################################
+webservrar.py
+
+#!/usr/bin/env python3
+
+import requests
+
+#dl = open('/home/ericb/python/4/domainlist', 'r')
+
+with open('/home/ericb/python/4/domainlist', 'r') as dl:
+    for line in dl:
+        strip_line = line.strip()
+        sl = strip_line.lower()
+        reqp = requests.get(sl)
+        print(reqp.headers['server'])
+        pass
+
+dl.close()
+
+###########################################################
+
+kvadratfil.py
+
+#!/usr/bin/env python3
+
+o = open('/input')
+#print(type(o))
+r = o.read()
+#print(type(r))
+i = int(r)
+#print(type(i))
+g = (i * i)
+#print(type(g))
+
+t = open('/home/ericb/python/4/kvadratfilresultat', 'w+')
+#print(type(t))
+a = t.write(str(g))
+print("done")
+
+###########################################################
+pilla_navel.py
+
+#!/usr/bin/env python3
+
+import random
+
+#Ta input från user och leta fram bästa kombinationen av drink och bok!
+#(om usern inte hellre pillar navel)!
+
+print("""\n
+██████╗ ██╗██╗     ██╗      █████╗     ███╗   ██╗ █████╗ ██╗   ██╗███████╗██╗
+██╔══██╗██║██║     ██║     ██╔══██╗    ████╗  ██║██╔══██╗██║   ██║██╔════╝██║
+██████╔╝██║██║     ██║     ███████║    ██╔██╗ ██║███████║██║   ██║█████╗  ██║
+██╔═══╝ ██║██║     ██║     ██╔══██║    ██║╚██╗██║██╔══██║╚██╗ ██╔╝██╔══╝  ██║
+██║     ██║███████╗███████╗██║  ██║    ██║ ╚████║██║  ██║ ╚████╔╝ ███████╗███████╗
+╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚══════╝
+
+""")
+
+
+c = random.choice(open('classics.txt').readlines())
+d = random.choice(open('dri_lst.txt').readlines())
+
+
+p = input('Pilla navel? Ja eller Nej: ')
+if (p == 'ja' or p== 'j' or p == 'J' or p == 'JA' or p == 'jA' or p == 'Ja'):
+    print('\nOkej, ha de gutt hajjj..!')
+
+elif (p == 'nej' or p == 'n' or p == 'Nej' or p == 'NEJ' or p == 'nEj' or p == 'NEj' or p == 'NEj' or p == 'neJ'):
+    print('\nOkeeej, intressant... då kör vi!')
+    l = input('\nVad är det som känns fel? ')
+    for x in l:
+        a = input('\nJajjemen, sånt som händer, men utveckla gärna: ')
+
+        print('\nOkej... då är det så att den fina drinken:',d.rstrip('\n'),'\nbäst paras ihop med den klassiska boken:',c.rstrip('\n'))
+        break
+elif (p == ''):
+    print('\nAjabaja, inga tomma svar!')
+
+else:
+    print('\nFattade inte...')
+
+###########################################################
+
+pacman.py
+
+#!/usr/bin/env python3
+
+with open('/bana') as f:
+    data = f.read()
+    printbana = data.splitlines()
+    print(*printbana[6:21], sep = '\n')
+    #print((li[19]))
+    #printabana = (*li[6:21], sep = '\n'))
+
+f.close()
+
+
+
+#def printbana:
+
+###########################################################
+scanner.py
+
+#!/usr/bin/env python3
+
+import socket
+import sys
+import subprocess
+
+ports = [17, 22, 23, 37, 53, 80, 118, 137, 179, 443]
+portz = [1337]
+print('''\n
+   ___           _                            ___     _                  ____    ___
+  / _ \___  _ __| |_ ___  ___ __ _ _ __      /   \___| |_   ___  _____  |___ \  / _ \
+ / /_)/ _ \| '__| __/ __|/ __/ _` | '_ \    / /\ / _ \ | | | \ \/ / _ \   __) || | | |
+/ ___/ (_) | |  | |_\__ \ (_| (_| | | | |  / /_//  __/ | |_| |>  <  __/  / __/ | |_| |
+\/    \___/|_|   \__|___/\___\__,_|_| |_| /___,' \___|_|\__,_/_/\_\___| |_____(_)___/
+
+''')
+
+ip = str(input('\nEnter ip adress please: '))
+
+print('\nChecking authenticity of numbers...', ip)
+print('\n ')
+
+try:
+
+    for p in portz:
+        soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        result = soc.connect_ex((ip, p))
+        if result == 0:
+            print('-' * 21)
+            print('Port nr.{}: OPEN'.center(20).format(p))
+            print('-' * 21)
+        else:
+            print('-' * 21)
+            print('Port nr.{}: CLOSED'.center(20).format(p))
+            print('-' * 21)
+        soc.close()
+except KeyboardInterrupt as x1:
+    print(' Vem vare som keyboardinterrupta!')
+    sys.exit()
+except socket.gaierror as x2:
+    print('ERROR_ERR0R_01100101 01110010 01110010 01101111 01110010 00001010', x2)
+    sys.exit()
+except socket.error as x3:
+    print('Server no reach good', x3)
+    sys.exit()
+
+print('\nThe end')
+
+
+###########################################################
+1337.py
+
+#!/usr/bin/env python3
+
+import socket
+import sys
+#import subprocess
+import math
+import re
+
+HOST = "10.0.5.139"
+PORT = 1337
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect((HOST, PORT))
+    data = s.recv(1024)
+    nt=(repr(data)[2:-1])
+    print('Succé!!', nt)
+    #x = data.decode('UTF-8')
+    x = data.decode()
+    temp = re.findall(r'\d+', x)
+    res = list(map(int, temp))
+
+
+
+    sum = math.prod(res)
+    convert_sum = str(sum)
+
+    k = str.encode(convert_sum)
+
+    #print(k)
+    print(repr(k)[2:-1])
+    s.sendall(k)
+    u = s.recv(1024)
+    #print(u)
+    print(repr(u)[2:-5])
+
+###########################################################
+
+client_gissatal.py
+
+#!/usr/bin/env python3
+
+import socket
+
+###CLIENT###
+HOST = '10.0.5.254'
+PORT = 7777
+############
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((HOST, PORT))
+server_hello=s.recv(1024)
+bytes_rec = server_hello.decode()
+print(f'fick svar : {bytes_rec}')
+
+connected = True
+low = 1
+high = 1000
+guess = (low+high)//2
+while connected:
+    guess = (low+high)//2
+    print('Gissar...', guess)
+    nums = str(guess).encode()
+    s.send(nums)
+    response = s.recv(1024)
+    response = response.decode()
+    if response == 'Gå lägre!':
+        high = guess
+        print(response)
+    elif response == 'Gå högre!':
+        low = guess + 1
+        print(response)
+    else:
+        #print('Gissade', guess)
+        print(response)
+        connected = False
+
+
+s.close()
+
+
+###########################################################
+
+server_gissatal.py
+
+#!/usr/bin/env python3
+
+import socket
+import random
+
+###SERVER###
+HOST = "10.0.5.254"
+PORT = 7777
+############
+
+so = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+so.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+guesses = 0
+'''
+def within(value, goal, n):
+    numDifference = abs(value - goal)
+    if (numDifference <= n):
+        return True
+    else:
+        return False
+'''
+num = random.randrange(0, 1000)
+so.bind((HOST, PORT))
+so.listen(2)
+f = 0
+
+connected = True
+while connected:
+    guess = 0
+    conn, ca = so.accept()
+    print('Connection from', ca)
+    print('\nLets play GISSATALET!')
+    start = 'Mellan 1 och 1000: '
+    start = start.encode()
+    send_start = conn.sendall(start)
+
+    while True:
+        f += 1
+        guess = conn.recv(1024)
+        guess = guess.decode()
+        guess = int(guess)
+        if guess == num:
+            win = 'Rätt gissat! Antal försök: ' + str(f)
+            conn.send(win.encode())
+            end = ', The end'
+            conn.send(end.encode())
+            connected = False
+            break
+        if guess > num:
+            lower = 'Gå lägre!'.encode()
+            conn.send(lower)
+        if guess < num:
+            higher = 'Gå högre!'.encode()
+            conn.send(higher)
+
+conn.close()
+so.close
+
+###########################################################
+skrivasnabbt.py
+
+#!/usr/bin/env python3
+
+import readchar
+from datetime import datetime
+import time
+#cha = readchar.readchar()
+
+
+abc = 'bcdefghijklmnopqrstuvwxyzåäö'
+abc2 = 'bö'
+fel = 0
+boter = 0
+print('Starta med a: ')
+st = readchar.readchar()
+if st == 'a':
+    start = time.time()
+
+for x in abc:
+    print('Skriv', x,':')
+    key = readchar.readchar()
+
+    while key != x:
+        print('ah du!')
+        boter + 0.1
+        fel += 1
+        key = readchar.readchar()
+
+
+    if key == "ö":
+        end = time.time()
+        time = end - start + boter
+        format_time = "{:.2f}".format(time)
+
+        print("Du klarade det på: ",(format_time))
+
+
+print('Antal fel: ', fel)
+
+###########################################################
+
+gg.py
+
+#!/usr/bin/env python3
+
+def computer_guess(num):
+    f = 0
+    low = 1
+    high = 1000
+    guess = (low+high)//2
+    while guess != num:
+        f+=1
+        guess = (low+high)//2
+        print('Gissar...', guess)
+        if guess > num:
+            high = guess
+        elif guess < num:
+            low = guess + 1
+
+    print('Gissade', guess, 'och fick rätt!')
+
+    print('Det krävdes', f, 'försök')
+    print(type(guess))
+def main():
+    num = int(input("Enter a number: "))
+    if num < 1 or num > 1000:
+        print("Must be in range [1, 1000]")
+    else:
+        computer_guess(num)
+
+if __name__ == '__main__':
+    main()
+
+###########################################################
+
+1000_2.py
+
+
+#!/usr/bin/env python3
+
+lockers=[]
+open_lockers=[]
+for x in range(1001):
+    lockers.append(True)
+for x in range(1,1001):
+    for y in range(1,1000):
+        if y % x == 0:
+            if lockers[y] is False:
+                lockers[y] = True
+            else:
+                lockers[y] = False
+for x in range(len(lockers)):
+    if lockers[x] == False:
+        open_lockers.append(x)
+
+
+
+
+print('''
+ _______ _     _ _______ _______ __   _      ___    _____  __   __
+    |    |     | |_____  |______ | \  |      ___|  |_____]   \_/
+    |    |_____| ______| |______ |  \_| ___ |___ . |          |
+
+''')
+
+print('Antal öppna skåp:',(len(open_lockers)))
+
+print('\nFöljande skåp är öppna: \n')
+nth = 8
+for i in range(0, len(open_lockers), nth):
+    print(*open_lockers[i:i+nth])
+
+
+
+###########################################################
