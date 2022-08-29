@@ -1,0 +1,110 @@
+bob@flaghunt-sih21m-ericb:/etc/apache2$ printf "GET / HTTP/1.1\r\nHost: z\r\n\r\n" | nc 172.17.0.16 80
+HTTP/1.1 200 OK
+Date: Tue, 23 Aug 2022 17:40:10 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Last-Modified: Fri, 16 Oct 2020 10:50:26 GMT
+ETag: "4c-5b1c7883f2080"
+Accept-Ranges: bytes
+Content-Length: 76
+Vary: Accept-Encoding
+Content-Type: text/html
+
+flag{2jJOGj_flaghunt_13_Hwo4jl}
+
+Flag 14 is in the db, login as bob:cisco123
+
+only user alfa can scp flag15.txt
+
+scp [OPTION] [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2
+
+
+i /tmp mappen skriver man: sed -e '1,4d' < Flaggan.txt > /home/alice/nyckeln.txt
+
+ssh -i nyckel.txt bob@10.0.0.3 -pxxxxx
+
+printf "GET / HTTP/1.1\r\nHost: z\r\n\r\n" 
+
+sudo openvpn ./Secyourity-lab-sih-its21-ericb.ovpn
+
+find / -perm /4000 2> /dev/null
+
+privesc7
+
+/etc/ssh
+
+/run.sh
+
+su -m -p root
+
+7
+/usr/bin/passwd
+/usr/bin/gpasswd
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/bin/su
+/bin/umount
+/bin/mount
+/bin/ping
+
+8
+/usr/bin/passwd
+/usr/bin/gpasswd
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/bin/su
+/bin/umount
+/bin/mount
+/bin/ping
+...
+/usr/bin/passwd
+/usr/bin/gpasswd
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/bin/base64
+/usr/lib/openssh/ssh-keysign
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/bin/su
+/bin/umount
+/bin/mount
+/bin/ping
+
+----- ------ ------- ------- ----
+4
+find / -perm /4000 2> /dev/null
+
+/usr/bin/passwd
+/usr/bin/gpasswd
+/usr/bin/chfn                                                                                                                                                        
+/usr/bin/newgrp                                                                                                                                                      
+/usr/bin/chsh                                                                                                                                                        
+	/usr/bin/sudo                                                                                                                                                        
+/usr/lib/openssh/ssh-keysign                                                                                                                                         
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+	/bin/su
+/bin/umount
+/bin/mount
+/bin/ping
+
+vim 
+vi
+
+drwx------   1 0 0 4096 May 12  2020 root
+
+nisse@privesc4-sih21m-ericb:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   4632   816 ?        Ss   20:15   0:00 /bin/sh -c echo "Hejhopp!";/run.sh ; sleep infinity
+root          17  0.0  0.0  72300  3196 ?        Ss   20:15   0:00 /usr/sbin/sshd
+root          18  0.0  0.0   4536   788 ?        S    20:15   0:00 sleep infinity
+root          19  0.0  0.0 105688  7100 ?        Ss   20:17   0:00 sshd: nisse [priv]
+nisse         30  0.0  0.0 107984  5508 ?        S    20:17   0:00 sshd: nisse@pts/0
+nisse         31  0.0  0.0  20360  3880 pts/0    Ss   20:17   0:00 -bash
+nisse         92  0.0  0.0  36152  3212 pts/0    R+   20:37   0:00 ps aux
+
+
